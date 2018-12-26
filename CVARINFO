@@ -1,0 +1,4 @@
+user bool diffGlassPlayerScreen = false;
+user float diffAmount = 0.009;
+user int diffLevel = 10;
+user int diffType = 1;

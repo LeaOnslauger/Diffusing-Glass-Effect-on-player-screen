@@ -1,0 +1,26 @@
+
+===========================================================================
+
+Title                   : Diffusing Glass Effect
+Filename                : DiffGlassEffect.pk3
+Version                 : 1.0
+Compatible port         : GZDoom
+Build time              : 1 day
+Release date            : 28 july 2018
+Author                  : Leandro Andres Poblete Velasquez (PsychoSilverTH)
+Email address           : psychosilverth@gmail.com
+Misc. author info       : Student, Gamer
+Editor(s) used          : Slade, KodeLife
+Description             : my first shader, diffusing glass effect for player screen,
+                          you can modify the parameters to get diffuse changes in menu options.
+
+======CREDITS==============================================================
+
+Gutawer's
+ShaderToy
+Zdoom Wiki
+
+======Copyright / Permissions==============================================
+
+if you want to use this shader you must give credits to the creator, only that.
+

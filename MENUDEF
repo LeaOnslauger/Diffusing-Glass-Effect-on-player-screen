@@ -1,0 +1,17 @@
+AddOptionMenu "OptionsMenu" 
+{
+	StaticText ""
+	Submenu "Diffusing Glass Options", "DiffGlassOptions"
+}
+
+OptionMenu "DiffGlassOptions" 
+{
+	Position -15
+	Title "Diffusing Glass Options"
+	
+	Option "Activate diffusing glass on player screen", "diffGlassPlayerScreen", "OnOff"
+	
+	Slider "Amount diffuse", "diffAmount", 0.0001, 0.1, 0.0001, 4
+	Slider "Level diffuse", "diffLevel", 1, 300, 1
+	Slider "Diffusing type", "diffType", 1, 3, 1
+}

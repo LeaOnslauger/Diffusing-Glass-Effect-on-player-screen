@@ -1,0 +1,18 @@
+
+HardwareShader PostProcess scene 
+{
+	Name "diffglassshader"
+	Shader "shaders/diffusingGlass.fp" 330
+	Uniform float diffAmount
+	Uniform int diffLevel
+	Uniform int diffType
+}
+
+hardwareshader shawn2
+{
+Name "diffglassshader2"
+	Shader "shaders/diffusingGlass2.fp" 330
+	Uniform float diffAmount
+	Uniform int diffLevel
+	Uniform float timer
+}

@@ -1,0 +1,50 @@
+version "3.2"
+
+class DoomPlayerDiff : DoomPlayer
+{
+
+override void Tick()
+{
+if(CVar.GetCVar("diffGlassPlayerScreen", player).GetInt())
+{
+	Shader.SetEnabled(player, "diffglassshader", true);
+	
+	Shader.SetUniform1f(player, "diffglassshader", "diffAmount", CVar.GetCVar("diffAmount", player).GetFloat());
+	Shader.SetUniform1f(player, "diffglassshader", "diffLevel", CVar.GetCVar("diffLevel", player).GetInt());
+	Shader.SetUniform1f(player, "diffglassshader", "diffType", CVar.GetCVar("diffType", player).GetInt());
+}
+else
+{
+Shader.SetEnabled(player, "diffglassshader", false);
+}
+    super.Tick();
+}
+
+}
+
+class DiffusingHandler : EventHandler
+{
+	PlayerInfo p;
+	override void UiTick()
+	{
+		if (p)
+		{
+			if (Cvar.GetCVar("diffGlassPlayerScreen", p).GetInt())
+			{
+			
+	Shader.SetUniform1f(p, "diffglassshader", "diffAmount", CVar.GetCVar("diffAmount", p).GetFloat());
+	Shader.SetUniform1f(p, "diffglassshader", "diffLevel", CVar.GetCVar("diffLevel", p).GetInt());
+	Shader.SetUniform1f(p, "diffglassshader", "diffType", CVar.GetCVar("diffType", p).GetInt());
+	Shader.SetEnabled(p, "diffglassshader", true);
+			}
+			else
+			{
+				Shader.SetEnabled(p, "diffglassshader", false);
+			}
+		}
+	}
+	override void PlayerEntered(PlayerEvent e)
+	{
+		p = players[e.PlayerNumber];
+	}
+}
